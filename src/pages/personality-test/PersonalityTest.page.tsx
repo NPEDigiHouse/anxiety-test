@@ -37,7 +37,6 @@ const PersonalityTest: React.FC<IPersonalityTest> = ({}) => {
   const {
     currentPage,
     result,
-    resultPercentage,
     setResult,
     setResultPercentage,
     currentTesterName,
@@ -59,6 +58,9 @@ const PersonalityTest: React.FC<IPersonalityTest> = ({}) => {
   );
 
   const [scroll, scrollTo] = useWindowScroll();
+
+  console.log(scroll)
+
   const { scrollIntoView, targetRef } = useScrollIntoView<HTMLDivElement>({
     duration: 500
   });

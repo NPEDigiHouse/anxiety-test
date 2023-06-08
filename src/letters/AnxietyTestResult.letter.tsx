@@ -1,13 +1,12 @@
-import React from "react";
 import {
-  Page,
-  Text,
-  View,
   Document,
-  StyleSheet,
   PDFViewer,
-  Image
+  Page,
+  StyleSheet,
+  Text,
+  View
 } from "@react-pdf/renderer";
+import React from "react";
 import { TestResult } from "../utils/const/types";
 // Create styles
 export interface IAnxietyTestResult {

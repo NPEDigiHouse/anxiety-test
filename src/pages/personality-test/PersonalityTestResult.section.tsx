@@ -21,9 +21,7 @@ export interface IPersonalityTestResult {
 }
 
 const PersonalityTestResult: React.FC<IPersonalityTestResult> = ({
-  scene,
   setScene,
-  scrollTo,
   scrollIntoView
 }) => {
   const {

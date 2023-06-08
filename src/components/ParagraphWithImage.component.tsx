@@ -1,12 +1,8 @@
 import { Group, Stack, Text } from "@mantine/core";
 import React from "react";
 import {
-  AnxietyPersonIcon,
-  PersonalitySearchIcon,
-  QuotesIconOutline,
-  ScaredPersonIcon
+  QuotesIconOutline
 } from "../assets/icons/Fluent";
-import personaLogo from "../assets/images/persona-logos.png";
 import VerticalDivider from "./VerticalDivider.component";
 
 export interface IParagraphWithImage {

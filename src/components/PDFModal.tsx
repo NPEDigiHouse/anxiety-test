@@ -1,4 +1,4 @@
-import { Modal, Text } from "@mantine/core";
+import { Modal } from "@mantine/core";
 import React from "react";
 
 interface IPDFModalProps {
@@ -15,7 +15,6 @@ const PDFModal = ({
   setOpened,
   title="Dokumen Hasil Tes Kecemasan",
   children,
-  maxWidth = 1000,
   onClose = () => {}
 }: IPDFModalProps) => {
   return (

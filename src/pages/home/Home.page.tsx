@@ -1,4 +1,4 @@
-import { Button, Stack, useMantineTheme } from "@mantine/core";
+import { Button, Stack } from "@mantine/core";
 import React from "react";
 import { Link } from "react-router-dom";
 import { ArrowRightAltIcon } from "../../assets/icons/Fluent";
@@ -10,7 +10,6 @@ import HomeJumbotron from "./HomeJumbotron.section";
 export interface IHome {}
 
 const Home: React.FC<IHome> = ({}) => {
-  const theme = useMantineTheme();
   return (
     <MainLayout>
       <Stack className="">

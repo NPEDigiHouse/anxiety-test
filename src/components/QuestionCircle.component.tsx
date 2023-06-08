@@ -1,7 +1,7 @@
 import { Stack, Text } from "@mantine/core";
 import React from "react";
-import AnswerCircle from "./AnswerCircle.component";
 import { AnswerCircleColorType } from "../utils/const/types";
+import AnswerCircle from "./AnswerCircle.component";
 
 export interface IQuestionCircleComponent {
   size?: number;
@@ -14,7 +14,6 @@ export interface IQuestionCircleComponent {
 }
 
 const QuestionCircleComponent: React.FC<IQuestionCircleComponent> = ({
-  size = 1,
   order,
   point,
   chooseNewChoice,

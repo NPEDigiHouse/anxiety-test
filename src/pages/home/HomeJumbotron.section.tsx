@@ -1,11 +1,10 @@
-import { Image, Stack, Text, useMantineTheme } from "@mantine/core";
+import { Image, Stack, Text } from "@mantine/core";
 import React from "react";
 import uinLogo from "../../assets/images/uin-logo.png";
 
 export interface IHomeJumbotron {}
 
 const HomeJumbotron: React.FC<IHomeJumbotron> = ({}) => {
-  const theme = useMantineTheme();
   return (
     <Stack className="mt-20 self-center pb-10 mb-20 w-full gap-0">
       <Stack className="self-center bg-backgroundImg2 bg-contain bg-center bg-no-repeat relative h-[550px] w-[95%] ">

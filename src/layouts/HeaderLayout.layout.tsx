@@ -1,8 +1,8 @@
-import { Grid, Group } from "@mantine/core";
+import { Group } from "@mantine/core";
 import React, { useEffect, useState } from "react";
-import HeaderNavbarMenuItems from "./HeaderNavbarMenuItems";
-import { NavbarMenuType } from "../utils/const/types";
 import { ROUTES } from "../utils/const/routes";
+import { NavbarMenuType } from "../utils/const/types";
+import HeaderNavbarMenuItems from "./HeaderNavbarMenuItems";
 
 export interface IHeaderLayout {
   scrollY: any;
@@ -10,7 +10,7 @@ export interface IHeaderLayout {
   setCurrentPage: React.Dispatch<React.SetStateAction<NavbarMenuType>>;
 }
 
-const HeaderLayout: React.FC<IHeaderLayout> = ({ scrollY = 0, currentPage, setCurrentPage }) => {
+const HeaderLayout: React.FC<IHeaderLayout> = ({ scrollY = 0, currentPage }) => {
   const [isScrolled, setIsScrolled] = useState<boolean>(scrollY != 0);
 
   useEffect(() => {

@@ -3,8 +3,7 @@ import {
   Grid,
   Image,
   Stack,
-  Text,
-  useMantineTheme
+  Text
 } from "@mantine/core";
 import React from "react";
 import {
@@ -19,7 +18,6 @@ export interface IPersonalityTestJumbotron {
 const PersonalityTestJumbotron: React.FC<IPersonalityTestJumbotron> = ({
   scrollIntoView
 }) => {
-  const theme = useMantineTheme();
   return (
     <Stack className="">
       <div className="w-[72px] ml-10 mt-4 hidden md:block">

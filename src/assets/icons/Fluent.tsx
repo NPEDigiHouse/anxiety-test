@@ -320,7 +320,6 @@ export function FileCheckIcon({
 
 export function PersonalitySearchGradientIcon({
   size = 24,
-  color = "black",
   onClick,
   className
 }: IFluentProps) {
@@ -357,9 +356,6 @@ export function PersonalitySearchGradientIcon({
 
 export function AnxietyPersonIcon({
   size = 24,
-  color = "black",
-  onClick,
-  className
 }: IFluentProps) {
   return (
     <svg
@@ -1351,10 +1347,7 @@ export function AnxietyPersonIcon({
 }
 
 export function ScaredPersonIcon({
-  size = 24,
-  color = "black",
-  onClick,
-  className
+  size = 24
 }: IFluentProps) {
   return (
     <svg
@@ -1965,8 +1958,6 @@ export function ScaredPersonIcon({
 
 export function ResultAnxietyIcon({
   size = 24,
-  color = "black",
-  onClick,
   className
 }: IFluentProps) {
   return (
@@ -2181,8 +2172,6 @@ export function ResultAnxietyIcon({
 
 export function NormalAnxietyIcon({
   size = 24,
-  color = "black",
-  onClick,
   className
 }: IFluentProps) {
   return (
@@ -2338,8 +2327,6 @@ export function NormalAnxietyIcon({
 
 export function NotAnxietyIcon({
   size = 24,
-  color = "black",
-  onClick,
   className
 }: IFluentProps) {
   return (
