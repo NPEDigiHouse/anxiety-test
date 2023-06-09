@@ -23,7 +23,7 @@ const PersonalityTestJumbotron: React.FC<IPersonalityTestJumbotron> = ({
       <div className="w-[72px] ml-10 mt-4 hidden md:block">
         <Image src={uinLogo} className="" />
       </div>
-      <Stack className="w-[80%] self-center mt-36 md:mt-16 ">
+      <Stack className="w-[90%] sm:w-[80%] self-center mt-24 sm:mt-36 md:mt-16 ">
         <Grid className=" ">
           <Grid.Col sm={12} md={7} className="flex pr-10 relative">
             {/* <SearchIconBold
@@ -31,12 +31,12 @@ const PersonalityTestJumbotron: React.FC<IPersonalityTestJumbotron> = ({
               color={theme.colors["secondary"][4]}
               className="absolute top-0"
             /> */}
-            <Stack className="w-fit align-middle h-fit self-center gap-8">
-              <Text className="font-poppins-semibold text-[38px] md:text-[46px] lg:text-[54px] text-pastel-primary-text z-10">
+            <Stack className="w-fit align-middle h-fit self-center gap-4 sm:gap-8">
+              <Text className="font-poppins-semibold text-[26px] sm:text-[38px] md:text-[46px] lg:text-[54px] text-pastel-primary-text z-10">
                 {/* Tes Kecemasan */}
                 Petunjuk Pengisian
               </Text>
-              <Text className="text-[18px] md:text-xl text-primary-text-500 tracking-4 text-justify">
+              <Text className="text-lg sm:text-[18px] md:text-xl text-primary-text-500 tracking-4 text-justify mt-4 sm:mt-0">
                 {/* Anda akan diarahkan untuk menjawab total 45 pertanyaan yang
                 masing-masing memiliki 4 pilihan jawaban.
                 <br />
@@ -52,7 +52,7 @@ const PersonalityTestJumbotron: React.FC<IPersonalityTestJumbotron> = ({
               </Text>
 
               <Button
-                className="bg-primaryDarkBlue hover:bg-primaryDarkBlue rounded-full w-fit px-10 pb-1 !h-12 text-xl font-normal mt-4"
+                className="bg-primaryDarkBlue hover:bg-primaryDarkBlue rounded-full w-fit px-10 sm:pb-1 h-10 md:!h-12 text-lg md:text-xl font-normal mt-4"
                 onClick={() => {
                   scrollIntoView({
                     alignment: "center"

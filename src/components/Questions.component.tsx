@@ -75,12 +75,12 @@ const Question: React.FC<IQuestion> = ({
 
   return (
     <Stack
-      className={`w-[80%] self-center`}
+      className={`w-[90%] md:w-[80%] self-center`}
       onClick={disabled ? getError : () => {}}
     >
       {/* ${!isPositive? "bg-error-500/[0.2]" : "bg-primaryGreen/[0.2]"} */}
       <Text
-        className={`text-center text-xl tracking-4 ${
+        className={`text-center text-[18px] sm:text-xl tracking-4 ${
           disabled ? "text-secondary-text-500" : "text-primary-text-500"
         }`}
       >
@@ -89,13 +89,13 @@ const Question: React.FC<IQuestion> = ({
       <div className="self-center">
         <Group className="gap-6 self-center flex-nowrap relative">
           <Text
-            className={`self-end mb-1  text-xl font-poppins  absolute -left-40 ${
+            className={`self-end mb-1 hidden sm:block text-xl font-poppins  absolute -left-40 ${
               disabled ? "text-secondary-text-500" : "text-primaryGreen"
             }`}
           >
             Sangat Setuju
           </Text>
-          <Group className="gap-8">
+          <Group className="gap-10 sm:gap-8 flex-nowrap">
             {answerPointList?.map(
               (point: IQuestionCircleComponent, e: number) => {
                 return (
@@ -103,6 +103,7 @@ const Question: React.FC<IQuestion> = ({
                     size={e + 1}
                     key={point.order + questions}
                     order={point.order}
+                    desc={point.desc}
                     point={point.point}
                     focusedChoice={focusedChoice}
                     chooseNewChoice={chooseNewChoice}
@@ -114,7 +115,7 @@ const Question: React.FC<IQuestion> = ({
             )}
           </Group>
           <Text
-            className={`self-end mb-1  text-xl font-poppins  absolute -right-36 ${
+            className={`self-end mb-1 hidden sm:block text-xl font-poppins  absolute -right-36 ${
               disabled ? "text-secondary-text-500" : "text-primaryDarkBlue"
             }`}
           >

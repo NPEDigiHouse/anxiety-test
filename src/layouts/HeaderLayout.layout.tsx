@@ -23,7 +23,7 @@ const HeaderLayout: React.FC<IHeaderLayout> = ({ scrollY = 0, currentPage }) => 
           <Group
             className={`${
               !isScrolled ? "bg-transparent border-white" : "bg-white/[0.925] !border-secondary-500 shadow-[0_0_20px_4px_rgba(0,0,0,0.125)]"
-            } px-3 py-2 transition-all ease-linear duration-200 rounded-full justify-evenly w-fit gap-8 mx-auto border `}
+            } px-3 py-2 transition-all ease-linear duration-200 rounded-full justify-evenly w-fit gap-2 sm:gap-8 mx-auto border flex-nowrap`}
           >
             <HeaderNavbarMenuItems
               href={`/${ROUTES.home}`}

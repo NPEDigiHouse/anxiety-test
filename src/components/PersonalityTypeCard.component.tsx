@@ -13,7 +13,7 @@ const PersonalityTypeCard: React.FC<IPersonalityTypeCard> = ({
   anxietyLevel,
   description="Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veniam, enim aut quaerat obcaecati assumenda corporis magnam reprehenderit quibusdam vitae nemo!"
 }) => (
-  <Stack className="bg-white rounded-xl p-2 border border-secondary-500 shadow-xl">
+  <Stack className="bg-white rounded-xl p-1 sm:p-2 border border-secondary-500 shadow-xl">
     <div className="flex overflow-visible items-center justify-center bg-secondary-400 rounded-full">
           {anxietyLevel === "Rendah" ? (
             <NotAnxietyIcon size={300} className="self-center " />
@@ -23,9 +23,9 @@ const PersonalityTypeCard: React.FC<IPersonalityTypeCard> = ({
             <ResultAnxietyIcon size={300} className="self-center " />
           )}
     </div>
-    <Text className="font-poppins-semibold text-primary-text-500 text-xl text-center">{anxietyLevel}</Text>
+    <Text className="font-poppins-semibold text-primary-text-500 text-lg sm:text-xl text-center">{anxietyLevel}</Text>
     <Stack className="gap-0">
-      <Text className="text-primary-text-500 text-justify px-4 pb-4">
+      <Text className="sm:text-lg text-[15px] text-primary-text-500 text-justify px-2 sm:px-4 py-2 sm:pb-4">
         {description}
       </Text>
     </Stack>

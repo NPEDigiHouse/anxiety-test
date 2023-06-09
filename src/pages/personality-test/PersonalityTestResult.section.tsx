@@ -38,7 +38,7 @@ const PersonalityTestResult: React.FC<IPersonalityTestResult> = ({
   const [isResultModalOpened, setIsResultModalOpened] = useState(false);
 
   return (
-    <Stack className="mt-28">
+    <Stack className="mt-16 sm:mt-24 md:mt-28">
       <PDFModal opened={isResultModalOpened} setOpened={setIsResultModalOpened}>
         <AnxietyTestResult
           name={currentTesterName || ""}
@@ -50,10 +50,10 @@ const PersonalityTestResult: React.FC<IPersonalityTestResult> = ({
         />
       </PDFModal>
       <Stack className="gap-0 self-center w-[90%]">
-        <Text className="self-center font-poppins-semibold text-[30px] md:text-[38px] text-primary-text-500 text-center">
+        <Text className="self-center font-poppins-semibold text-[26px] sm:text-[30px] md:text-[38px] text-primary-text-500 text-center">
           Nama: {currentTesterName}
         </Text>
-        <Text className="self-center font-poppins-semibold text-[30px] md:text-[38px] text-primary-text-500 text-center">
+        <Text className="self-center font-poppins-semibold text-[26px] sm:text-[30px] md:text-[38px] text-primary-text-500 text-center">
           Hasil Tes: Kecemasan
           <span
             className={`w-[90%] font-poppins-bold  ${
@@ -69,7 +69,7 @@ const PersonalityTestResult: React.FC<IPersonalityTestResult> = ({
           </span>
         </Text>
       </Stack>
-      <Group className="justify-center w-[90%] self-center gap-10 md:gap-10 mt-0 md:mt-10">
+      <Group className="justify-center w-[90%] self-center gap-2 md:gap-10 mt-0 md:mt-10">
         <div className="flex self-center w-[200px] md:w-[320px] overflow-hidden">
           {result === "Rendah" ? (
             <NotAnxietyIcon size={300} />
@@ -85,20 +85,20 @@ const PersonalityTestResult: React.FC<IPersonalityTestResult> = ({
             color={"#deddf1"}
             className="absolute -z-10 right-0 -bottom-6 md:-top-4"
           />
-          <Stack className="gap-2 md:gap-0">
+          <Stack className="gap-0 md:gap-0">
             <Text className="font-poppins-bold text-[18px] md:text-[30px] text-primary-text-500">
               Tingkat Kecemasan {result}
             </Text>
-            <Text className="text-[18px] md:text-[20px] text-secondary-text-500 -mt-1">
+            <Text className="text-lg sm:text-[18px] md:text-[20px] text-secondary-text-500 -mt-1">
               Dengan Presentase Kecemasan {resultPercentage?.toFixed(1)} %
             </Text>
           </Stack>
           <div className="">
             <VerticalDivider h="sm" />
           </div>
-          <Stack className="gap-0">
+          <Stack className="gap-0 -mt-4 sm:mt-0">
             <Text
-              className={`md:w-[700px] text-primary-text-500 tracking-1 text-justify text-[18px]`}
+              className={`md:w-[700px] text-primary-text-500 tracking-1 text-justify text-lg sm:text-[18px]`}
             >
               {result === "Rendah" ? (
                 <>
@@ -123,10 +123,10 @@ const PersonalityTestResult: React.FC<IPersonalityTestResult> = ({
           </Stack>
         </Stack>
       </Group>
-      <Grid className="mt-16 self-center w-[80%]">
+      <Grid className="mt-8 sm:mt-14 md:mt-16 self-center w-[80%]">
         <Grid.Col sm={12} md={6}>
           <Button
-            className="bg-primaryGreen hover:bg-primaryGreen rounded-full !h-14 text-xl font-normal !w-full"
+            className="bg-primaryGreen hover:bg-primaryGreen rounded-full !h-12 sm:!h-14 text-lg sm:text-xl font-normal !w-full"
             rightIcon={
               <RestartIcon size={26} className="mt-[2px]" color={"#FFFFFF"} />
             }
@@ -147,7 +147,7 @@ const PersonalityTestResult: React.FC<IPersonalityTestResult> = ({
         </Grid.Col>
         <Grid.Col sm={12} md={6}>
           <Button
-            className="bg-primaryDarkBlue hover:bg-primaryDarkBlue rounded-full !h-14 text-xl font-normal !w-full"
+            className="bg-primaryDarkBlue hover:bg-primaryDarkBlue rounded-full !h-12 sm:!h-14 text-lg sm:text-xl font-normal !w-full"
             rightIcon={
               <PDFIcon size={26} className="mt-[2px]" color={"#FFFFFF"} />
             }

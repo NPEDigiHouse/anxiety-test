@@ -137,13 +137,13 @@ const PersonalityTest: React.FC<IPersonalityTest> = ({}) => {
         ></div>
         {scene === "pertanyaan" && result == null ? (
           <>
-            <Stack className="mt-36 gap-24 mb-10">
+            <Stack className="mt-20 sm:mt-32 md:mt-36 gap-16 sm:gap-24 mb-10">
               <Stack className="gap-12">
                 <Stack className="gap-0">
-                  <Text className="font-poppins-semibold text-2xl text-primary-text-500 text-center">
+                  <Text className="font-poppins-semibold text-xl sm:text-2xl text-primary-text-500 text-center">
                     Pengisian Identitas
                   </Text>
-                  <Text className="text-lg text-secondary-text-500 text-center">
+                  <Text className="text-md sm:text-lg text-secondary-text-500 text-center">
                     Pertanyaan tes tidak bisa dijawab pertanyaan jika tidak
                     mengisi identitas terlebih dahulu.
                   </Text>
@@ -226,10 +226,10 @@ const PersonalityTest: React.FC<IPersonalityTest> = ({}) => {
                 </Grid>
               </Stack>
               <Stack className="gap-0 -mb-4">
-                <Text className="font-poppins-semibold text-2xl text-primary-text-500 text-center">
+                <Text className="font-poppins-semibold text-xl sm:text-2xl text-primary-text-500 text-center">
                   Pertanyaan
                 </Text>
-                <Text className="text-lg text-secondary-text-500 text-center w-[90%] self-center">
+                <Text className="text-md sm:text-lg text-secondary-text-500 text-center w-[90%] self-center">
                   Pilih jawaban yang paling sesuai dengan pengalaman pribadi
                   Anda karena pilihan jawaban akan memberikan kontribusi
                   terhadap hasil akhir
@@ -266,7 +266,7 @@ const PersonalityTest: React.FC<IPersonalityTest> = ({}) => {
               })}
             </Stack>
             <Button
-              className="bg-primaryDarkBlue hover:bg-primaryDarkBlue rounded-full w-[80%] !h-14 text-xl self-center font-normal mt-20"
+              className="bg-primaryDarkBlue hover:bg-primaryDarkBlue rounded-full w-[80%] !h-12 sm:!h-14 text-xl self-center font-normal mt-4 sm:mt-16 md:mt-20"
               rightIcon={
                 <SearchIcon
                   size={26}

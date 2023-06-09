@@ -9,9 +9,9 @@ export interface IFooterLayout {}
 const FooterLayout: React.FC<IFooterLayout> = ({}) => {
   const theme= useMantineTheme();
   return (
-    <Stack className="bg-primary-text-500 pb-4 pt-8 mt-32 border-t-[6px] border-t-primaryGreen">
+    <Stack className="bg-primary-text-500 pb-4 pt-8 mt-16 sm:mt-32 border-t-[6px] border-t-primaryGreen">
       <Group className="self-center gap-10">
-        <div className="w-[80px]">
+        <div className="w-[70px] sm:w-[80px]">
           <Image src={uinLogo} className="" />
         </div>
         {/* <DotDivider />
@@ -44,14 +44,14 @@ const FooterLayout: React.FC<IFooterLayout> = ({}) => {
           </Group>
         </Stack> */}
       </Group>
-      <Group className="gap-10 self-center mt-2">
-        <Link to={"/"} className="font-semibold tracking-[0.05em] text-white">
+      <Group className="gap-4 sm:gap-10 self-center mt-2">
+        <Link to={"/"} className="font-semibold tracking-[0.05em] text-white text-[15px] sm:text-lg">
           Home
         </Link>
-        <Link to={"/"+ROUTES.anxietyTest} className="font-semibold tracking-[0.05em] text-white">
+        <Link to={"/"+ROUTES.anxietyTest} className="font-semibold tracking-[0.05em] text-white text-[15px] sm:text-lg">
           Tes Kecemasan
         </Link>
-        <Link to={"/"+ROUTES.anxietyClass} className="font-semibold tracking-[0.05em] text-white">
+        <Link to={"/"+ROUTES.anxietyClass} className="font-semibold tracking-[0.05em] text-white text-[15px] sm:text-lg">
           Tingkat Kecemasan
         </Link>
         {/* <Link to={"/personality-type"} className="font-semibold tracking-[0.05em]">
@@ -60,7 +60,7 @@ const FooterLayout: React.FC<IFooterLayout> = ({}) => {
       </Group>
       <Divider color={theme.colors['secondary-text'][5]} />
 
-      <Text className="text-white text-lg text-center mt-1 tracking-4">
+      <Text className="text-white text-md sm:text-lg text-center mt-1 tracking-4">
         &copy; 2023 UIN Satu Tulungagung - All rights reserved
       </Text>
     </Stack>

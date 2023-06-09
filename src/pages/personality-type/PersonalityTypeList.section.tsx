@@ -6,27 +6,27 @@ export interface IPersonalityTypeList {}
 
 const PersonalityTypeList: React.FC<IPersonalityTypeList> = ({}) => {
   return (
-    <Stack className="mt-32">
+    <Stack className="mt-20 sm:mt-32">
       <Stack>
-        <Text className="font-poppins-semibold text-[32px] md:text-[38px] text-pastel-primary-text z-10 text-center self-center w-fit">
+        <Text className="font-poppins-semibold text-[24px] sm:text-[32px] md:text-[38px] text-pastel-primary-text z-10 text-center self-center w-fit">
           Detail Tingkat Kecemasan
           <Divider className="mt-2" />
         </Text>
       </Stack>
-      <Grid gutter={50} className="mx-12 mt-4">
-        <Grid.Col span={6} md={4}>
+      <Grid gutter={50} className="mx-4 sm:mx-12 mt-4">
+        <Grid.Col span={12} md={4}>
           <PersonalityTypeCard
             anxietyLevel={"Rendah"}
             description="Siswa memiliki persepsi positif terhadap diri dan lingkungan yang mendukungnya untuk dapat melakukan interaksi sosial dengan baik"
           />
         </Grid.Col>
-        <Grid.Col span={6} md={4}>
+        <Grid.Col span={12} md={4}>
           <PersonalityTypeCard
             anxietyLevel={"Sedang"}
             description="Siswa cukup memiliki persepsi negatif terhadap diri dan lingkungan yang mengakibatkan siswa melakukan penghindaran sosial"
           />
         </Grid.Col>
-        <Grid.Col span={6} md={4}>
+        <Grid.Col span={12} md={4}>
           <PersonalityTypeCard
             anxietyLevel={"Tinggi"}
             description="Siswa memiliki persepsi negatif terhadap diri dan lingkungannya yang mengakibatkan siswa melakukan penghindaran sosial"

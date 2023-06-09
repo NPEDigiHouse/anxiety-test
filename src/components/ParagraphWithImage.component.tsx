@@ -31,7 +31,7 @@ const ParagraphWithImage: React.FC<IParagraphWithImage> = ({
           <Text className="font-poppins-bold text-[18px] md:text-[30px] text-primary-text-500">
             {primaryTitle}
           </Text>
-          <Text className="font-poppins-bold text-[22px] md:text-[54px] text-primaryGreen -mt-2">
+          <Text className="font-poppins-bold text-[24px] md:text-[54px] text-primaryGreen -mt-2">
             {secondaryTitle}
           </Text>
         </Stack>
@@ -40,7 +40,7 @@ const ParagraphWithImage: React.FC<IParagraphWithImage> = ({
         </div>
         <Stack className="gap-0">
           <Text
-            className={`md:w-[1000px] text-primary-text-500 tracking-1 text-justify text-[18px]`}
+            className={`md:w-[1000px] text-primary-text-500 tracking-1 text-justify text-lg sm:text-[18px]`}
           >
             {paragraph}
           </Text>

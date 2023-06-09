@@ -108,7 +108,7 @@ const Home: React.FC<IHome> = ({}) => {
         />
 
         <Button
-          className="bg-primaryDarkBlue hover:bg-primaryDarkBlue z-10 rounded-full mt-4 px-10 w-fit !h-12 text-[18px] self-center font-normal"
+          className="bg-primaryDarkBlue hover:bg-primaryDarkBlue z-10 rounded-full mt-4 px-10 w-fit h-10 md:!h-12 text-lg sm:text-[18px] self-center font-normal"
           rightIcon={
             <ArrowRightAltIcon
               size={28}
