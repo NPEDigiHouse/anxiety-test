@@ -46,9 +46,9 @@ const Question: React.FC<IQuestion> = ({
     isPositive ? positiveAnswerPointList : negativeAnswerPointList
   );
 
-  if (isPositive) {
-    console.log(`- ${questions}`);
-  }
+  // if (isPositive) {
+  //   console.log(`- ${questions}`);
+  // }
 
   function chooseNewChoice(order: number, point: number) {
     if (focusedChoice == order) {

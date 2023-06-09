@@ -17,7 +17,7 @@ const PersonalityTypeJumbotron: React.FC<IPersonalityTypeJumbotron> = ({}) => {
       <div className="w-[72px] ml-10 mt-4 hidden md:block">
         <Image src={uinLogo} className="" />
       </div>
-      <Grid className="mt-24 md:mt-16 w-[98%] sm:w-[90%] md:w-[80%] self-center bg-white">
+      <Grid className="mt-32 md:mt-16 w-[98%] sm:w-[90%] md:w-[80%] self-center bg-white">
         <Grid.Col span={3} className="">
           <Stack className=" gap-2 cursor-default">
             <Stack className="gap-0">

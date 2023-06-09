@@ -23,7 +23,7 @@ const PersonalityTestJumbotron: React.FC<IPersonalityTestJumbotron> = ({
       <div className="w-[72px] ml-10 mt-4 hidden md:block">
         <Image src={uinLogo} className="" />
       </div>
-      <Stack className="w-[90%] sm:w-[80%] self-center mt-24 sm:mt-36 md:mt-16 ">
+      <Stack className="w-[90%] sm:w-[80%] self-center mt-32 sm:mt-36 md:mt-16 ">
         <Grid className=" ">
           <Grid.Col sm={12} md={7} className="flex pr-10 relative">
             {/* <SearchIconBold
