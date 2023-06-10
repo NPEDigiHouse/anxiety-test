@@ -231,5 +231,5 @@ export const DummyQuestionPack: Array<IQuestionPack> = [
 ];
 
 export function getQuestionPack(){
-  return TempQuestionPack.sort(() => Math.random() - 0.5);
+  return DummyQuestionPack.sort(() => Math.random() - 0.5);
 }

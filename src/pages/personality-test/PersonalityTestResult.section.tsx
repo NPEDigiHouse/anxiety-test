@@ -1,4 +1,4 @@
-import { Button, Grid, Group, Stack, Text } from "@mantine/core";
+import { Button, Grid, Group, MediaQuery, Stack, Text } from "@mantine/core";
 import React, { useContext, useState } from "react";
 import {
   FileCheckIcon,
@@ -11,7 +11,10 @@ import {
 import PDFModal from "../../components/PDFModal";
 import VerticalDivider from "../../components/VerticalDivider.component";
 import { AppContext } from "../../context/app-context.context";
-import AnxietyTestResult from "../../letters/AnxietyTestResult.letter";
+import AnxietyTestResult, {
+  styles
+} from "../../letters/AnxietyTestResult.letter";
+import { PDFDownloadLink, PDFViewer } from "@react-pdf/renderer";
 
 export interface IPersonalityTestResult {
   scene: "pertanyaan" | "hasil";
@@ -40,14 +43,16 @@ const PersonalityTestResult: React.FC<IPersonalityTestResult> = ({
   return (
     <Stack className="mt-16 sm:mt-24 md:mt-28">
       <PDFModal opened={isResultModalOpened} setOpened={setIsResultModalOpened}>
-        <AnxietyTestResult
-          name={currentTesterName || ""}
-          age={currentTesterAge || 0}
-          classes={currentTesterClass || ""}
-          gender={currentTesterGender || ""}
-          percentage={resultPercentage}
-          result={result}
-        />
+        <PDFViewer style={styles.viewer}>
+          <AnxietyTestResult
+            name={currentTesterName || ""}
+            age={currentTesterAge || 0}
+            classes={currentTesterClass || ""}
+            gender={currentTesterGender || ""}
+            percentage={resultPercentage}
+            result={result}
+          />
+        </PDFViewer>
       </PDFModal>
       <Stack className="gap-0 self-center w-[90%]">
         <Text className="self-center font-poppins-semibold text-[26px] sm:text-[30px] md:text-[38px] text-primary-text-500 text-center">
@@ -146,17 +151,47 @@ const PersonalityTestResult: React.FC<IPersonalityTestResult> = ({
           </Button>
         </Grid.Col>
         <Grid.Col sm={12} md={6}>
-          <Button
-            className="bg-primaryDarkBlue hover:bg-primaryDarkBlue rounded-full !h-12 sm:!h-14 text-lg sm:text-xl font-normal !w-full"
-            rightIcon={
-              <PDFIcon size={26} className="mt-[2px]" color={"#FFFFFF"} />
-            }
-            onClick={() => {
-              setIsResultModalOpened(true);
-            }}
-          >
-            Tampilkan Dokumen Hasil
-          </Button>
+          <MediaQuery largerThan="md" styles={{ display: "none" }}>
+            <PDFDownloadLink
+              document={
+                <AnxietyTestResult
+                  name={currentTesterName || ""}
+                  age={currentTesterAge || 0}
+                  classes={currentTesterClass || ""}
+                  gender={currentTesterGender || ""}
+                  percentage={resultPercentage}
+                  result={result}
+                />
+              }
+              fileName="hasil-tes-kecemasan.pdf"
+            >
+              <Button
+                className="bg-primaryDarkBlue hover:bg-primaryDarkBlue rounded-full !h-12 sm:!h-14 text-lg sm:text-xl font-normal !w-full"
+                rightIcon={
+                  <PDFIcon size={26} className="mt-[2px]" color={"#FFFFFF"} />
+                }
+                // onClick={() => {
+                //   setIsResultModalOpened(true);
+                // }}
+              >
+                Tampilkan Dokumen Hasil
+              </Button>
+            </PDFDownloadLink>
+          </MediaQuery>
+
+          <MediaQuery smallerThan="md" styles={{ display: "none" }}>
+            <Button
+              className="bg-primaryDarkBlue hover:bg-primaryDarkBlue rounded-full !h-12 sm:!h-14 text-lg sm:text-xl font-normal !w-full"
+              rightIcon={
+                <PDFIcon size={26} className="mt-[2px]" color={"#FFFFFF"} />
+              }
+              onClick={() => {
+                setIsResultModalOpened(true);
+              }}
+            >
+              Tampilkan Dokumen Hasil
+            </Button>
+          </MediaQuery>
         </Grid.Col>
       </Grid>
     </Stack>

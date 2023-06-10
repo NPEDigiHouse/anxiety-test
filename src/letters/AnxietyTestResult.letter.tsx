@@ -27,7 +27,6 @@ const AnxietyTestResult: React.FC<IAnxietyTestResult> = ({
   classes,
   gender
 }) => (
-  <PDFViewer style={styles.viewer}>
     <Document title={`Hasil Tes Kecemasan - ${name}`}>
       <Page size="A4" style={styles.page}>
         <View style={styles.content}>
@@ -154,10 +153,9 @@ const AnxietyTestResult: React.FC<IAnxietyTestResult> = ({
         </View>
       </Page> */}
     </Document>
-  </PDFViewer>
 );
 
-const styles = StyleSheet.create({
+export const styles = StyleSheet.create({
   viewer: {
     width: "100%",
     height: "100vh"

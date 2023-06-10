@@ -6,6 +6,7 @@ import Home from "./pages/home/Home.page";
 import PersonalityTest from "./pages/personality-test/PersonalityTest.page";
 import PersonalityType from "./pages/personality-type/PersonalityType.page";
 import { ROUTES } from "./utils/const/routes";
+import NotFoundPage from "./pages/not-found/NotFound.page";
 
 function App() {
   return (
@@ -145,6 +146,7 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path={ROUTES.anxietyClass} element={<PersonalityType />} />
             <Route path={ROUTES.anxietyTest} element={<PersonalityTest />} />
+            <Route path={"*"} element={<NotFoundPage />} />
           </Routes>
         </BrowserRouter>
       </MantineProvider>
