@@ -30,7 +30,6 @@ const Question: React.FC<IQuestion> = ({
   idx,
   setProgressCount,
   questions,
-  isPositive,
   answerPointList,
   updateScore,
   disabled = false,
