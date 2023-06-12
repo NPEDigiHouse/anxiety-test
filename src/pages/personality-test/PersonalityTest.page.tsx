@@ -20,6 +20,10 @@ import Question from "../../components/Questions.component";
 import { AppContext } from "../../context/app-context.context";
 import useArray from "../../hooks/useArray";
 import MainLayout from "../../layouts/MainLayout.layout";
+import {
+  negativeAnswerPointList,
+  positiveAnswerPointList
+} from "../../utils/const/answesList";
 import { IQuestionPack, getQuestionPack } from "../../utils/const/questions";
 import {
   IPersonalityTestForm,
@@ -59,7 +63,7 @@ const PersonalityTest: React.FC<IPersonalityTest> = ({}) => {
 
   const [scroll, scrollTo] = useWindowScroll();
 
-  console.log(scroll)
+  console.log(scroll);
 
   const { scrollIntoView, targetRef } = useScrollIntoView<HTMLDivElement>({
     duration: 500
@@ -87,7 +91,7 @@ const PersonalityTest: React.FC<IPersonalityTest> = ({}) => {
   const { onSubmit, ...form } = useForm<IPersonalityTestForm>({
     validate: yupResolver(personalityTestFormSchema)
   });
-  // console.log('Pertanyaan Positif: ')
+  console.log("Pertanyaan Positif: ", scoreArr, sumScoreArr);
 
   const { getInputProps, errors, setValues, values } = form;
 
@@ -236,12 +240,16 @@ const PersonalityTest: React.FC<IPersonalityTest> = ({}) => {
                 </Text>
               </Stack>
               {QuestionPack?.map((question: IQuestionPack, e: number) => {
+                const answerPointList = question.isPositive
+                  ? positiveAnswerPointList
+                  : negativeAnswerPointList;
                 return (
                   <>
                     <Question
                       key={e}
-                      idx={e + 1}
+                      idx={e}
                       isPositive={question.isPositive}
+                      answerPointList={answerPointList}
                       questions={question.question}
                       progressCount={progressCount}
                       setProgressCount={setProgressCount}

@@ -1,6 +1,5 @@
 import {
   Document,
-  PDFViewer,
   Page,
   StyleSheet,
   Text,

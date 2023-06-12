@@ -1,10 +1,6 @@
 import { Group, Stack, Text } from "@mantine/core";
 import React, { useEffect, useState } from "react";
 import usePrevious from "../hooks/usePrevious";
-import {
-  negativeAnswerPointList,
-  positiveAnswerPointList
-} from "../utils/const/answesList";
 import { AnswerCircleColorType } from "../utils/const/types";
 import QuestionCircleComponent, {
   IQuestionCircleComponent
@@ -15,7 +11,8 @@ export interface IQuestion {
   idx: number;
   setProgressCount: React.Dispatch<React.SetStateAction<number>>;
   questions: string;
-  isPositive: boolean;
+  isPositive?: boolean;
+  answerPointList: IQuestionCircleComponent[];
   updateScore: any;
   disabled?: boolean;
   getError?: () => void;
@@ -34,6 +31,7 @@ const Question: React.FC<IQuestion> = ({
   setProgressCount,
   questions,
   isPositive,
+  answerPointList,
   updateScore,
   disabled = false,
   getError = () => {}
@@ -41,10 +39,6 @@ const Question: React.FC<IQuestion> = ({
   const [focusedChoice, setFocusedChoice] = useState<number | null>(null);
   const prevFocusedChoice = usePrevious(focusedChoice);
   const [currPoint, setCurrPoint] = useState(0);
-
-  const [answerPointList] = useState<Array<IQuestionCircleComponent>>(
-    isPositive ? positiveAnswerPointList : negativeAnswerPointList
-  );
 
   // if (isPositive) {
   //   console.log(`- ${questions}`);
@@ -84,7 +78,7 @@ const Question: React.FC<IQuestion> = ({
           disabled ? "text-secondary-text-500" : "text-primary-text-500"
         }`}
       >
-        {idx}. {questions}
+        {idx+1}. {questions}
       </Text>
       <div className="self-center">
         <Group className="gap-6 self-center flex-nowrap relative">

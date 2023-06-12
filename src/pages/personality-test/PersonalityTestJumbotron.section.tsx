@@ -25,7 +25,7 @@ const PersonalityTestJumbotron: React.FC<IPersonalityTestJumbotron> = ({
       </div>
       <Stack className="w-[90%] sm:w-[80%] self-center mt-32 sm:mt-36 md:mt-16 ">
         <Grid className=" ">
-          <Grid.Col sm={12} md={7} className="flex pr-10 relative">
+          <Grid.Col span={12} lg={7} className="flex pr-10 relative">
             {/* <SearchIconBold
               size={100}
               color={theme.colors["secondary"][4]}
@@ -63,7 +63,7 @@ const PersonalityTestJumbotron: React.FC<IPersonalityTestJumbotron> = ({
               </Button>
             </Stack>
           </Grid.Col>
-          <Grid.Col md={5} className="">
+          <Grid.Col span={0} lg={5} className="">
             <Stack className="pt-4 md:pt-4 lg:pt-0 hidden lg:flex">
               <div className="relative self-center">
                 <div className="p-4 rounded-lg bg-secondary-500 overflow-hidden max-w-[440px]">
