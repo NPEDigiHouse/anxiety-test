@@ -1,10 +1,4 @@
-import {
-  Document,
-  Page,
-  StyleSheet,
-  Text,
-  View
-} from "@react-pdf/renderer";
+import { Document, Page, StyleSheet, Text, View } from "@react-pdf/renderer";
 import React from "react";
 import { TestResult } from "../utils/const/types";
 // Create styles
@@ -26,11 +20,11 @@ const AnxietyTestResult: React.FC<IAnxietyTestResult> = ({
   classes,
   gender
 }) => (
-    <Document title={`Dokumen Asesmen Kecemasan - ${name}`}>
-      <Page size="A4" style={styles.page}>
-        <View style={styles.content}>
-          <View style={styles.contentTitle}>
-            {/* <Text style={styles.contentTitleText}>
+  <Document title={`Dokumen Asesmen Kecemasan - ${name}`}>
+    <Page size="A4" style={styles.page}>
+      <View style={styles.content}>
+        <View style={styles.contentTitle}>
+          {/* <Text style={styles.contentTitleText}>
               DEPARTEMEN PENDIDIKAN NASIONAL
             </Text>
             <Text style={styles.contentTitleText}>
@@ -42,64 +36,86 @@ const AnxietyTestResult: React.FC<IAnxietyTestResult> = ({
             <Text style={styles.contentTitleText}>
               JURUSAN BIMBINGAN KONSELING ISLAM
             </Text> */}
-            <Text style={styles.contentTitleText2}>
-              LAPORAN HASIL KECEMASAN SOSIAL PADA SISWA
-            </Text>
-          </View>
+          <Text style={styles.contentTitleText2}>
+            LAPORAN HASIL KECEMASAN SOSIAL PADA SISWA
+          </Text>
+        </View>
 
-          <View style={styles.students}>
-            <View style={styles.biodataContainer}>
-              <View style={styles.biodata}>
-                <View style={styles.studentData}>
-                  <Text style={styles.data}>Nama</Text>
-                  <Text style={styles.data}>Kelas</Text>
-                </View>
-                <View style={styles.studentDataValue}>
-                  <Text style={styles.data}>: {name}</Text>
-                  <Text style={styles.data}>: {classes}</Text>
-                  {/* <Text style={styles.data}></Text> */}
-                </View>
+        <View style={styles.students}>
+          <View style={styles.biodataContainer}>
+            <View style={styles.biodata}>
+              <View style={styles.studentData}>
+                <Text style={styles.data}>Nama</Text>
+                <Text style={styles.data}>Kelas</Text>
               </View>
-              <View style={styles.biodata}>
-                <View style={styles.studentData}>
-                  <Text style={styles.data}>Jenis Kelamin</Text>
-                  <Text style={styles.data}>Umur</Text>
-                </View>
-                <View style={styles.studentDataValue}>
-                  <Text style={styles.data}>: {gender}</Text>
-                  <Text style={styles.data}>: {age}</Text>
-                  {/* <Text style={styles.data}></Text> */}
-                </View>
+              <View style={styles.studentDataValue}>
+                <Text style={styles.data}>: {name}</Text>
+                <Text style={styles.data}>: {classes}</Text>
+                {/* <Text style={styles.data}></Text> */}
               </View>
             </View>
+            <View style={styles.biodata}>
+              <View style={styles.studentData}>
+                <Text style={styles.data}>Jenis Kelamin</Text>
+                <Text style={styles.data}>Umur</Text>
+              </View>
+              <View style={styles.studentDataValue}>
+                <Text style={styles.data}>: {gender}</Text>
+                <Text style={styles.data}>: {age}</Text>
+                {/* <Text style={styles.data}></Text> */}
+              </View>
+            </View>
+          </View>
 
-            <View>
-              <Text style={styles.headerTextContent}>
-                {/* Dari hasil perhitungan angket yang sudah Anda isi diperoleh
-                hasil presentase sebesar {percentage?.toFixed(2)} %. Dengan ini
-                Anda dinyatakan masuk dalam kategori {result}. (jika hasilnya
-                rendah-sedang yang ditampilkan adalah, manfaat tidak memiliki
-                kecemasan, diantaranya mampu meningkatkan self esteem sehingga
-                dapat menerima segala kelebihan dan kekurangan yang dimiliki,
-                mendapatkan kepuasan hidup, kesehatan fisik dan psikologis lebih
-                terjaga, memudahkan untuk berinteraksi sosial.) (jika hasilnya
-                tinggi maka yang ditampilkan dampak dari kecemasan sosial,
-                diantaranya kesulitan dalam situasi sosial, harga diri yang
-                rendah, performa akademis yang menurun bahkan buruk, masalah
-                kesehatan fisik, dan juga dapat berdampak pada hubungan
-                interpersonal dengan orang lain.) */}
-                Dari hasil perhitungan angket yang sudah Anda isi diperoleh
-                hasil presentase sebesar {percentage?.toFixed(2)} %. Dengan ini
-                Anda dinyatakan masuk dalam kategori {result}.{" "}
-                {result == "Rendah"
-                  ? "Anda mampu meningkatkan self esteem sehingga dapat menerima segala kelebihan dan kekurangan yang dimiliki, mendapatkan kepuasan hidup, kesehatan fisik dan psikologis lebih terjaga, memudahkan untuk berinteraksi sosial."
-                  : "Dampak dari kecemasan sosial termasuk kesulitan dalam situasi sosial, harga diri yang rendah, performa akademis yang menurun bahkan buruk, masalah kesehatan fisik, dan juga dapat berdampak pada hubungan interpersonal dengan orang lain."}
+          <View style={styles.table}>
+            <View style={styles.tableHead}>
+              <Text style={styles.row1}>Interval Presentase (%)</Text>
+              <Text style={styles.row2}>Klasifikasi</Text>
+              <Text style={styles.row3Header}>Interpretasi</Text>
+            </View>
+            <View style={styles.tableRow}>
+              <Text style={styles.row1}>1-33</Text>
+              <Text style={styles.row2}>Rendah</Text>
+              <Text style={styles.row3}>
+                Siswa memiliki persepsi positif terhadap diri dan lingkungan
+                yang mendukungnya untuk dapat melakukan interaksi sosial dengan
+                baik
+              </Text>
+            </View>
+            <View style={styles.tableRow}>
+              <Text style={styles.row1}>34-65</Text>
+              <Text style={styles.row2}>Sedang</Text>
+              <Text style={styles.row3}>
+                Siswa cukup memiliki persepsi negatif terhadap diri dan
+                lingkungan yang mengakibatkan siswa melakukan penghindaran
+                sosial
+              </Text>
+            </View>
+            <View style={styles.tableRow}>
+              <Text style={styles.row1}>66-100</Text>
+              <Text style={styles.row2}>Tinggi</Text>
+              <Text style={styles.row3}>
+                Siswa memiliki persepsi negatif terhadap diri dan lingkungannya
+                yang mengakibatkan siswa melakukan penghindaran sosial
               </Text>
             </View>
           </View>
+
+          <View style={styles.group}>
+            <Text style={styles.headerTextContent}>Saran :{"  "}</Text>
+            <Text style={styles.headerTextContent2}>
+              Dari hasil perhitungan angket yang sudah Anda isi diperoleh hasil
+              presentase sebesar {percentage?.toFixed(2)} %. Dengan ini Anda
+              dinyatakan masuk dalam kategori {result}.{" "}
+              {result == "Rendah"
+                ? "Anda mampu meningkatkan self esteem sehingga dapat menerima segala kelebihan dan kekurangan yang dimiliki, mendapatkan kepuasan hidup, kesehatan fisik dan psikologis lebih terjaga, memudahkan untuk berinteraksi sosial."
+                : "Dampak dari kecemasan sosial termasuk kesulitan dalam situasi sosial, harga diri yang rendah, performa akademis yang menurun bahkan buruk, masalah kesehatan fisik, dan juga dapat berdampak pada hubungan interpersonal dengan orang lain."}
+            </Text>
+          </View>
         </View>
-      </Page>
-      {/* <Page size="A4" style={styles.page}>
+      </View>
+    </Page>
+    {/* <Page size="A4" style={styles.page}>
         <View style={styles.content}>
           <View style={styles.contentTitle}>
             <Text style={styles.contentTitleText}>
@@ -151,7 +167,7 @@ const AnxietyTestResult: React.FC<IAnxietyTestResult> = ({
           </View>
         </View>
       </Page> */}
-    </Document>
+  </Document>
 );
 
 export const styles = StyleSheet.create({
@@ -164,7 +180,10 @@ export const styles = StyleSheet.create({
     paddingVertical: 30,
     fontFamily: "Times-Roman"
   },
-
+  group: {
+    display: "flex",
+    flexDirection: "row"
+  },
   section: {
     margin: 10,
     padding: 10,
@@ -253,7 +272,17 @@ export const styles = StyleSheet.create({
     // marginBottom: 12000,
     textAlign: "justify",
     lineHeight: "1.25px",
-    letterSpacing: "0.1px"
+    letterSpacing: "0.1px",
+    width: "8%"
+  },
+  headerTextContent2: {
+    fontSize: 12,
+    marginTop: 16,
+    // marginBottom: 12000,
+    textAlign: "justify",
+    lineHeight: "1.25px",
+    letterSpacing: "0.1px",
+    width: "92%"
   },
   headerTextContainer: {
     flexDirection: "row"
@@ -280,7 +309,7 @@ export const styles = StyleSheet.create({
   students: {
     display: "flex",
     flexDirection: "column",
-    marginTop:  10
+    marginTop: 10
   },
   biodataContainer: {
     display: "flex",
@@ -327,7 +356,8 @@ export const styles = StyleSheet.create({
     marginLeft: 30
   },
   table: {
-    marginTop: 16,
+    marginTop: 32,
+    marginBottom: 16,
     borderWidth: 1
   },
   tableHead: {
@@ -364,6 +394,13 @@ export const styles = StyleSheet.create({
     paddingVertical: 5,
     fontFamily: "Times-Roman",
     textAlign: "justify"
+  },
+  row3Header: {
+    width: "50%",
+    paddingHorizontal: 7,
+    paddingVertical: 5,
+    fontFamily: "Times-Roman",
+    textAlign: "center"
   }
 });
 
