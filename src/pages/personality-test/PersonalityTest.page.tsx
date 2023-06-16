@@ -148,7 +148,7 @@ const PersonalityTest: React.FC<IPersonalityTest> = ({}) => {
                     Pengisian Identitas
                   </Text>
                   <Text className="text-md sm:text-lg text-secondary-text-500 text-center">
-                    Pertanyaan tes tidak bisa dijawab pertanyaan jika tidak
+                    Pertanyaan asesmen tidak bisa dijawab pertanyaan jika tidak
                     mengisi identitas terlebih dahulu.
                   </Text>
                 </Stack>

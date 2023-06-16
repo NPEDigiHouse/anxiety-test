@@ -59,7 +59,7 @@ const PersonalityTestJumbotron: React.FC<IPersonalityTestJumbotron> = ({
                   });
                 }}
               >
-                Mulai Tes Kecemasan
+                Mulai Asesmen
               </Button>
             </Stack>
           </Grid.Col>

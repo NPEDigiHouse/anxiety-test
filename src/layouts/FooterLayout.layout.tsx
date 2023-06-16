@@ -49,7 +49,7 @@ const FooterLayout: React.FC<IFooterLayout> = ({}) => {
           Home
         </Link>
         <Link to={"/"+ROUTES.anxietyTest} className="font-semibold tracking-[0.05em] text-white text-[15px] sm:text-lg">
-          Tes Kecemasan
+          Asesmen Kecemasan
         </Link>
         <Link to={"/"+ROUTES.anxietyClass} className="font-semibold tracking-[0.05em] text-white text-[15px] sm:text-lg">
           Tingkat Kecemasan

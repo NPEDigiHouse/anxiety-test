@@ -26,7 +26,7 @@ const AnxietyTestResult: React.FC<IAnxietyTestResult> = ({
   classes,
   gender
 }) => (
-    <Document title={`Hasil Tes Kecemasan - ${name}`}>
+    <Document title={`Dokumen Asesmen Kecemasan - ${name}`}>
       <Page size="A4" style={styles.page}>
         <View style={styles.content}>
           <View style={styles.contentTitle}>

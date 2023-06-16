@@ -8,6 +8,6 @@ interface IROUTES {
 
 export const ROUTES : IROUTES = {
   home: "",
-  anxietyTest: "tes-kecemasan",
+  anxietyTest: "asesmen-kecemasan",
   anxietyClass: "tingkat-kecemasan"
 }

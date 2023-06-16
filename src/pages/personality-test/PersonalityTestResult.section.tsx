@@ -59,7 +59,7 @@ const PersonalityTestResult: React.FC<IPersonalityTestResult> = ({
           Nama: {currentTesterName}
         </Text>
         <Text className="self-center font-poppins-semibold text-[26px] sm:text-[30px] md:text-[38px] text-primary-text-500 text-center">
-          Hasil Tes: Kecemasan
+          Hasil Asesmen: Kecemasan
           <span
             className={`w-[90%] font-poppins-bold  ${
               result === "Rendah"
@@ -147,7 +147,7 @@ const PersonalityTestResult: React.FC<IPersonalityTestResult> = ({
               setResultPercentage(null);
             }}
           >
-            Ulang Tes
+            Ulang Asesmen
           </Button>
         </Grid.Col>
         <Grid.Col sm={12} md={6}>
@@ -163,7 +163,7 @@ const PersonalityTestResult: React.FC<IPersonalityTestResult> = ({
                   result={result}
                 />
               }
-              fileName="hasil-tes-kecemasan.pdf"
+              fileName="hasil-asesmen-kecemasan.pdf"
             >
               <Button
                 className="bg-primaryDarkBlue hover:bg-primaryDarkBlue rounded-full !h-12 sm:!h-14 text-lg sm:text-xl font-normal !w-full"

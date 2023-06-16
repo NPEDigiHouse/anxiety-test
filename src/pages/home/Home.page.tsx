@@ -119,7 +119,7 @@ const Home: React.FC<IHome> = ({}) => {
           component={Link}
           to={ROUTES.anxietyTest}
         >
-          Tes Kecemasan
+          Asesmen Kecemasan
         </Button>
         {/* <div className="h-[1000px]"></div> */}
       </Stack>

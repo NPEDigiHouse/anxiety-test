@@ -13,7 +13,7 @@ interface IPDFModalProps {
 const PDFModal = ({
   opened,
   setOpened,
-  title="Dokumen Hasil Tes Kecemasan",
+  title="Dokumen Asesmen Kecemasan",
   children,
   onClose = () => {}
 }: IPDFModalProps) => {
